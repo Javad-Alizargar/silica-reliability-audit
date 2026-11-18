@@ -2,9 +2,11 @@
 
 Upload labeled model predictions, check source separation, compare calibration rules and export an auditable reliability report. The standalone browser workbench runs locally and does not send uploaded files to a server.
 
-Version 0.2.0. This repository supplies data and code for a reproducible silica cytotoxicity benchmark and a reusable binary-prediction audit.
+Version v2.0.1. This repository supplies data and code for a reproducible silica cytotoxicity benchmark and a reusable binary-prediction audit.
 
 Software is licensed under [MIT](LICENSE). Original and derived data retain [CC BY-NC 4.0](DATA_LICENSE.md); the software license does not relicense the data.
+
+[Archived release v2.0.1](https://github.com/Javad-Alizargar/silica-reliability-audit/releases/tag/v2.0.1) is preserved at [Zenodo version DOI 10.5281/zenodo.24347308](https://doi.org/10.5281/zenodo.24347308).
 
 ## Use the workbench
 
