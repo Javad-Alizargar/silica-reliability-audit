@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "Use this metadata to cite the software. Cite the original dataset separately; its CC BY-NC 4.0 terms also apply to derived data."
 type: software
 title: "NanoReliability: software for auditing labeled model predictions"
-version: "0.2.0"
+version: "v2.0.1"
+doi: "10.5281/zenodo.24347308"
 license: MIT
 repository-code: "https://github.com/Javad-Alizargar/silica-reliability-audit"
 authors:
