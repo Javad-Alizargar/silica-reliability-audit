@@ -1,0 +1,7 @@
+regime,variable,outcome,sources,spearman_r
+external,n,source_brier,26,-0.10243255623520094
+external,distance,source_brier,26,0.3695726495726495
+row,n,source_brier,115,-0.26271199079288987
+row,distance,source_brier,115,0.03363061948759697
+study,n,source_brier,115,-0.004659484287559334
+study,distance,source_brier,115,-0.059796417580683346

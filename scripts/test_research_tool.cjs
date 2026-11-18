@@ -1,0 +1,30 @@
+/* Hand-computed edge cases plus export of real-data results for Python parity. */
+'use strict';
+const fs=require('fs'),path=require('path'),assert=require('assert');
+const root=path.resolve(__dirname,'..'),A=require('../website/audit.js');
+let checks=0;function check(fn){fn();checks++;}
+check(()=>assert.equal(A.quantile([.1,.2,.3,.4],.2),.4));
+check(()=>assert.equal(A.quantile([.1,.2,.3,.4],.1),Infinity));
+check(()=>assert.equal(A.quantile([],.1),Infinity));
+check(()=>assert.deepEqual([A.code(.1,[.2,.2]),A.code(.9,[.2,.2]),A.code(.5,[.2,.2]),A.code(.5,[1,1])],[1,2,0,3]));
+check(()=>assert.deepEqual(A.parseCSV('id,note\r\na,"x,y"\r\nb,"line1\nline2"').rows,[{id:'a',note:'x,y'},{id:'b',note:'line1\nline2'}]));
+check(()=>assert.throws(()=>A.parseCSV('a,a\n1,2')));
+check(()=>assert.throws(()=>A.parseCSV('a,b\n1,2,3')));
+const map={row_id:'row_id',study:'study',y:'y',p:'p',role:'role'};
+const toy='row_id,study,y,p,role\na,A,0,.1,calibration\nb,B,1,.8,calibration\nc,C,1,.9,evaluation\nd,D,0,.2,evaluation';
+check(()=>assert.equal(A.normalise(A.parseCSV(toy),map,true).errors.length,0));
+check(()=>assert(A.normalise(A.parseCSV(toy.replace('d,D','d,A')),map,true).errors.length));
+check(()=>assert.equal(A.normalise(A.parseCSV(toy.replace('d,D','d,A')),map,false).errors.length,0));
+check(()=>assert(A.normalise(A.parseCSV(toy.replace('d,D','a,D')),map,true).errors.length));
+check(()=>assert(A.normalise(A.parseCSV(toy.replace('1,.9','1,1.2')),map,true).errors.length));
+check(()=>assert(A.normalise(A.parseCSV(toy.replace('1,.9','2,.9')),map,true).errors.length));
+check(()=>assert.equal(A.calibrate([{study:'A',row_id:'a',y:0,p:.1}], 'label_conditional',.5,1).q[1],Infinity));
+check(()=>{const r=A.metrics([{study:'A',y:1,p:.9},{study:'A',y:0,p:.7},{study:'B',y:1,p:.2}],[2,2,3]);assert.equal(r.row_coverage,2/3);assert.equal(r.whole_source_coverage,.5);assert.equal(r.singleton_error,.5);assert.equal(r.source_balanced_coverage,.75);});
+check(()=>assert.equal(A.metrics([{study:'A',y:1,p:.5}],[3]).singleton_error,null));
+check(()=>assert.equal(A.parseCSV(A.csv([{a:'<script>',b:'x,"y"\nz'}])).rows[0].b,'x,"y"\nz'));
+const parsed=A.parseCSV(fs.readFileSync(path.join(root,'website/example.csv'),'utf8'));
+const v=A.normalise(parsed,map,true);assert.equal(v.errors.length,0);
+const r=A.run(v.records,.1,20261118);const output={checks,real_data:r,validation:v.warnings};
+fs.mkdirSync(path.join(root,'reports/v2'),{recursive:true});
+fs.writeFileSync(path.join(root,'reports/v2/tool_math_results.json'),JSON.stringify(output));
+console.log(checks+' hand-computed/parser checks passed; actual example exported for independent comparison.');

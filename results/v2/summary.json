@@ -1,0 +1,194 @@
+{
+  "error_detection": [
+    {
+      "regime": "external",
+      "n": 905,
+      "error_prevalence": 0.15359116022099448,
+      "distance_error_auc": 0.5556145162199222,
+      "uncertainty_error_auc": 0.7616460356518963,
+      "unknown_fraction": 0.40331491712707185
+    },
+    {
+      "regime": "row",
+      "n": 4116,
+      "error_prevalence": 0.13338192419825073,
+      "distance_error_auc": 0.5479861695168676,
+      "uncertainty_error_auc": 0.8271307058275029,
+      "unknown_fraction": 0.0017006802721088435
+    },
+    {
+      "regime": "study",
+      "n": 4116,
+      "error_prevalence": 0.3435374149659864,
+      "distance_error_auc": 0.4710801470334196,
+      "uncertainty_error_auc": 0.5982711480939782,
+      "unknown_fraction": 0.4681729834791059
+    }
+  ],
+  "contrasts": [
+    {
+      "regime": "external",
+      "contrast": "label_conditional_minus_pooled_negative_coverage",
+      "estimate": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "bootstrap_sources": 26
+    },
+    {
+      "regime": "external",
+      "contrast": "label_conditional_minus_pooled_positive_coverage",
+      "estimate": 0.017777777777777778,
+      "lo": 0.0,
+      "hi": 0.05439330543933055,
+      "bootstrap_sources": 26
+    },
+    {
+      "regime": "external",
+      "contrast": "unknown_minus_known_brier",
+      "estimate": 0.0399493896393973,
+      "lo": -0.01756455900377355,
+      "hi": 0.08787893494705291,
+      "bootstrap_sources": 26
+    },
+    {
+      "regime": "external",
+      "contrast": "unknown_minus_known_error",
+      "estimate": 0.022678843226788453,
+      "lo": -0.07976353978583048,
+      "hi": 0.1057571520761748,
+      "bootstrap_sources": 26
+    },
+    {
+      "regime": "row",
+      "contrast": "label_conditional_minus_pooled_negative_coverage",
+      "estimate": -0.03121474238435502,
+      "lo": -0.04368487368277467,
+      "hi": -0.021368589004862094,
+      "bootstrap_sources": 115
+    },
+    {
+      "regime": "row",
+      "contrast": "label_conditional_minus_pooled_positive_coverage",
+      "estimate": 0.07481125600549074,
+      "lo": 0.054498247032831994,
+      "hi": 0.11193678426744073,
+      "bootstrap_sources": 115
+    },
+    {
+      "regime": "row",
+      "contrast": "unknown_minus_known_brier",
+      "estimate": 0.05122258781845558,
+      "lo": -0.09275005381630114,
+      "hi": 0.5827290479735951,
+      "bootstrap_sources": 115
+    },
+    {
+      "regime": "row",
+      "contrast": "unknown_minus_known_error",
+      "estimate": 0.009491360428328044,
+      "lo": -0.15401730531520397,
+      "hi": 0.8542780748663101,
+      "bootstrap_sources": 115
+    },
+    {
+      "regime": "study",
+      "contrast": "label_conditional_minus_pooled_negative_coverage",
+      "estimate": -0.0857465212485897,
+      "lo": -0.1339054876515266,
+      "hi": -0.05213928671885988,
+      "bootstrap_sources": 115
+    },
+    {
+      "regime": "study",
+      "contrast": "label_conditional_minus_pooled_positive_coverage",
+      "estimate": 0.15923129718599863,
+      "lo": 0.07065626675134594,
+      "hi": 0.26549367901588977,
+      "bootstrap_sources": 115
+    },
+    {
+      "regime": "study",
+      "contrast": "unknown_minus_known_brier",
+      "estimate": 0.043240801608395774,
+      "lo": -0.07654675908390314,
+      "hi": 0.14218334657386314,
+      "bootstrap_sources": 115
+    },
+    {
+      "regime": "study",
+      "contrast": "unknown_minus_known_error",
+      "estimate": 0.011712570495066299,
+      "lo": -0.14218769664503295,
+      "hi": 0.13883781910570048,
+      "bootstrap_sources": 115
+    }
+  ],
+  "quality": [
+    {
+      "publication_id": 13,
+      "n": 16,
+      "flagged_n": 4,
+      "max_ug_ml": 100000.0,
+      "status": "unresolved primary full text"
+    },
+    {
+      "publication_id": 84,
+      "n": 54,
+      "flagged_n": 30,
+      "max_ug_ml": 3200000.0,
+      "status": "unresolved concentration conversion"
+    },
+    {
+      "publication_id": 87,
+      "n": 44,
+      "flagged_n": 12,
+      "max_ug_ml": 30000.0,
+      "status": "high-dose units confirmed against primary Figure 1 and Table 1"
+    }
+  ],
+  "learning": {
+    "('auc', 'min')": {
+      "10": 0.7297385621,
+      "20": 0.7178954248,
+      "40": 0.7289607843,
+      "60": 0.8296830065,
+      "86": 0.8736633987
+    },
+    "('auc', 'median')": {
+      "10": 0.7676078431,
+      "20": 0.768127451,
+      "40": 0.835624183,
+      "60": 0.8513464052,
+      "86": 0.8736633987
+    },
+    "('auc', 'max')": {
+      "10": 0.7884150327,
+      "20": 0.8544084967,
+      "40": 0.8748464052,
+      "60": 0.8854150327,
+      "86": 0.8736633987
+    },
+    "('brier', 'min')": {
+      "10": 0.1581097214,
+      "20": 0.1351551098,
+      "40": 0.1172300449,
+      "60": 0.110768664,
+      "86": 0.1165776805
+    },
+    "('brier', 'median')": {
+      "10": 0.1665377851,
+      "20": 0.1604868758,
+      "40": 0.1288521973,
+      "60": 0.1207902192,
+      "86": 0.1165776805
+    },
+    "('brier', 'max')": {
+      "10": 0.2280609359,
+      "20": 0.1981647128,
+      "40": 0.1562873761,
+      "60": 0.1318929592,
+      "86": 0.1165776805
+    }
+  },
+  "no_new_p_values": true
+}

@@ -1,0 +1,66 @@
+{
+  "cohorts": [
+    {
+      "cohort": "development",
+      "original_n": 4124,
+      "n": 4116,
+      "duplicates_removed": 8,
+      "studies": 115,
+      "positive": 1457,
+      "nanoscale_n": 3609,
+      "range_size_nm": [
+        2.1,
+        1000.0
+      ],
+      "range_dose_ug_ml": [
+        0.000218,
+        3200000.0
+      ],
+      "range_time_h": [
+        1.0,
+        240.0
+      ]
+    },
+    {
+      "cohort": "external",
+      "original_n": 905,
+      "n": 905,
+      "duplicates_removed": 0,
+      "studies": 26,
+      "positive": 225,
+      "nanoscale_n": 757,
+      "range_size_nm": [
+        7.0,
+        1000.0
+      ],
+      "range_dose_ug_ml": [
+        0.0128,
+        5000.0
+      ],
+      "range_time_h": [
+        0.08333333,
+        120.0
+      ],
+      "continuous_label_disagreements": 0,
+      "in_house_n": 136
+    }
+  ],
+  "overlapping_source_groups": 0,
+  "external_matching_profile_n": 14,
+  "raw_sha256": "cb637a97a24166d13492a22102c913e45a3e868fab52a56f9fb97202552dfd87",
+  "feature_columns": [
+    "size_nm",
+    "dose_ug_ml",
+    "time_h",
+    "serum",
+    "surface",
+    "shape",
+    "synthesis",
+    "species",
+    "cell",
+    "disease",
+    "medium",
+    "assay"
+  ],
+  "interpretation": "Repeated experimental conditions; source IDs are not laboratory IDs."
+}

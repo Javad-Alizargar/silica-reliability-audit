@@ -1,0 +1,32 @@
+[
+  {
+    "path": "download/nn2c11968_si_003.xlsx",
+    "bytes": 796716,
+    "sha256": "cb637a97a24166d13492a22102c913e45a3e868fab52a56f9fb97202552dfd87",
+    "md5": "ccbf67bd6a038e14da03e06e86887ad4",
+    "source": "https://api.figshare.com/v2/articles/23112038",
+    "download_url": "https://ndownloader.figshare.com/files/40837010",
+    "doi": "10.1021/acsnano.2c11968.s003",
+    "license": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    "retrieved_utc": "2026-11-18T11:57:37.285033+00:00"
+  },
+  {
+    "path": "literature/raw/nn2c11968_si_001.zip",
+    "bytes": 1412088,
+    "sha256": "0e24006df6fe7733c52ed638468c3edea75cebf5db24759ffacfd2d565156b18",
+    "md5": "f412c587ba467a6b9efb01f5b611a621",
+    "source": "https://api.figshare.com/v2/articles/23112032",
+    "download_url": "https://ndownloader.figshare.com/files/40837001",
+    "doi": "10.1021/acsnano.2c11968.s001",
+    "license": {
+      "value": 10,
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    "retrieved_utc": "2026-11-18T11:57:40.980509+00:00"
+  }
+]

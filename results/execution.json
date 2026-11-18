@@ -1,0 +1,12 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "numpy": "2.3.2",
+  "pandas": "2.2.2",
+  "sklearn": "1.8.0",
+  "seed": 20261118,
+  "analysis_fingerprint": "f758ff9f3f2df2358c23a339d172d8ab81b667db8e1810fe7a67560f82f434c6",
+  "elapsed_seconds": 112.91227006912231,
+  "fit_tasks": 157,
+  "sap_sha256": "36298b424d092704eaf6018e95cf740cb099fe7ec953022a34750419363a43ad"
+}

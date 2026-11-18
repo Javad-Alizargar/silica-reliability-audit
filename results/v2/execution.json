@@ -1,0 +1,9 @@
+{
+  "fingerprint": "14ee42f57a96349af10f407d40695ca03297554585f6dffacba15f8a0c51a166",
+  "original_primary_recovered": 11,
+  "additional_learning_fits": 20,
+  "max_recovery_difference": 3.3306690738754696e-16,
+  "elapsed_seconds": 49.24940848350525,
+  "plan_sha256": "c057aa25abd1a710a38c92b917f44c0e7876369f663c4815cb4763a2099cc5fc",
+  "status": "exploratory post-hoc extension; no evaluation-set tuning"
+}

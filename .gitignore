@@ -1,0 +1,16 @@
+APIS/
+apis/
+**/[Aa][Pp][Ii][Ss]/
+.env*
+.venv*/
+__pycache__/
+*.pyc
+download/*.xlsx
+literature/
+results/checkpoints/*
+results/v2/checkpoints/*
+!results/v2/checkpoints/.gitkeep
+manuscript/
+reports/v2/browser/
+reports/v2/tool_math_results.json
+reports/v2/TOOL_PARITY.json

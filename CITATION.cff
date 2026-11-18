@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Use this metadata to cite the software. Cite the original dataset separately; its CC BY-NC 4.0 terms also apply to derived data."
+type: software
+title: "NanoReliability: software for auditing labeled model predictions"
+version: "0.2.0"
+license: MIT
+repository-code: "https://github.com/Javad-Alizargar/silica-reliability-audit"
+authors:
+  - family-names: Alizargar
+    given-names: Javad
+  - family-names: Hatefi
+    given-names: Shahrokh
+  - family-names: Smith
+    given-names: Farouk
+abstract: "A local browser workbench and executable analysis of grouped validation, class coverage and abstention using published silica-particle cytotoxicity data. The MIT license applies to software; original and derived data retain CC BY-NC 4.0 terms."
+keywords:
+  - nanomaterials
+  - silica
+  - conformal prediction
+  - grouped validation
+  - reproducibility
